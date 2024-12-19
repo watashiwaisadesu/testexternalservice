@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Request
 import logging
 
-from .middleware import register_middleware
+from middleware import register_middleware
 
 # Initialize FastAPI app
 app = FastAPI()
