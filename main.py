@@ -70,7 +70,7 @@ async def process_message(request: Request):
         }
 
 
-        json_resp = {"status": "success", "reply": response_text}
+        json_resp = {"status": "success", "reply": response_content}
         logging.info(f"Replying with: {json_resp}")
         return json_resp
 
