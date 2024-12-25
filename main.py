@@ -69,8 +69,10 @@ async def process_message(request: Request):
             "response_text": response_content,
         }
 
-        # Return only the assistant's text
-        return {response_content}
+
+        json_resp = {"status": "success", "reply": response_text}
+        logging.info(f"Replying with: {json_resp}")
+        return json_resp
 
     except Exception as e:
         logging.error(f"Error processing message: {e}")
